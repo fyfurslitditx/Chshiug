@@ -6,7 +6,7 @@
             "version": "latest"
         }
     },
-    "postStartCommand": ".devcontainer/list.sh",
+    "postStartCommand": "REPO_NAME=$(basename $(git rev-parse --show-toplevel)); python3 /workspaces/$REPO_NAME/list.py",
     "customizations": {
         "vscode": {
             "settings": {
